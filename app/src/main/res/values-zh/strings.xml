@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">实验一</string>
+    <string name="greeting">你好!</string>
+    <string name="ButtonText">按键</string>
+</resources>
