@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">实验一</string>
+    <string name="app_name">我的应用</string>
     <string name="greeting">你好!</string>
     <string name="ButtonText">按键</string>
+    <string name="login_text">登录</string>
+    <string name="indicate">登录名</string>
+    <string name="password">密码</string>
+    <string name="flag">国旗</string>
+    <string name="nameButton">点钮</string>
+    <string name="check_box">勾选格</string>
+    <string name="swi_ques"> 这干哈的?</string>
 </resources>
