@@ -10,4 +10,12 @@
     <string name="nameButton">RadioButton</string>
     <string name="check_box">CheckBox</string>
     <string name="swi_ques">What does this do?</string>
+    <string name="button_login">Login</string>
+    <string name="dialog_message">Sure to exit?</string>
+    <string name="SwitchOn">Switch is On</string>
+    <string name="SwitchOff">Switch is Off</string>
+    <string name="dialog_title">Alert</string>
+    <string name="ok">YES</string>
+    <string name="cancel">NO</string>
+
 </resources>
