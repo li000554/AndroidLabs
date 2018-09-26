@@ -14,7 +14,6 @@ public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

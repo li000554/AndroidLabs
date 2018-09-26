@@ -149,7 +149,6 @@ public class ListItemsActivity extends Activity {
     }
 
 
-
     protected void onActivityResult(int requestCode, int responseCode, Intent data){
 
         setResult(Activity.RESULT_OK);
