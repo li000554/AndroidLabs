@@ -19,5 +19,6 @@
     <string name="cancel">NO</string>
     <string name="chatButton">Chat Button</string>
     <string name="startChat">Start Chat</string>
+    <string name="sendButton">Send</string>
 
 </resources>

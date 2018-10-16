@@ -40,18 +40,17 @@ public class LoginActivity extends Activity {
 
                 editor.commit();
 
-                Intent intent = new Intent(LoginActivity.this,StartActivity.class);
+                Intent intent = new Intent(LoginActivity.this, StartActivity.class);
 
                 startActivity(intent);
 
-                // Code here executes on main thread after user presses button
+                // executes on main thread after user presses button
 
             }
 
         });
 
     }
-
 
     protected void onResume(){
         super.onResume();

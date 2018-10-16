@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-public class ChatWindowActivity extends Activity {
+public class ChatWindow extends Activity {
 
     ListView chatView;
     Button buttonChat;
@@ -32,7 +32,8 @@ public class ChatWindowActivity extends Activity {
         editText = findViewById(R.id.chatBox);
         message = new ArrayList<>();
 
-        final ChatAdapter messageAdapter = new ChatAdapter(this);//this means chatWindow
+        final ChatAdapter messageAdapter;//this means chatWindow
+        messageAdapter = new ChatAdapter(this);
         chatView.setAdapter(messageAdapter);
 
         buttonChat.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +70,7 @@ public class ChatWindowActivity extends Activity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
-            LayoutInflater inflater = ChatWindowActivity.this.getLayoutInflater();
+            LayoutInflater inflater = ChatWindow.this.getLayoutInflater();
             View result = null;
             if(position % 2 == 1) result = inflater.inflate(R.layout.layout_row_incoming,null);
             else result = inflater.inflate(R.layout.layout_row_outgoing,null);
