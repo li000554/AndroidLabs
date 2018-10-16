@@ -24,11 +24,13 @@
         android:inputType="textEmailAddress"/>
 
     <TextView
+        android:id="@id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/password"/>
 
     <EditText
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"/>
@@ -39,7 +41,7 @@
         android:src="@drawable/flag"/>
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_login" />

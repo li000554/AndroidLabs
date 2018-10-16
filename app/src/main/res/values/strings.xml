@@ -17,5 +17,7 @@
     <string name="dialog_title">Alert</string>
     <string name="ok">YES</string>
     <string name="cancel">NO</string>
+    <string name="chatButton">Chat Button</string>
+    <string name="startChat">Start Chat</string>
 
 </resources>

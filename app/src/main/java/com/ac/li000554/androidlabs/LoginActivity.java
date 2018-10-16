@@ -21,21 +21,18 @@ public class LoginActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
 
-        final Button loginButton = (Button)findViewById(R.id.loginButton);
+        final Button loginButton = (Button)findViewById(R.id.button_login);
 
         final EditText editText = (EditText)findViewById(R.id.editText);
 
         final SharedPreferences prefs = getSharedPreferences("User_Info", Context.MODE_PRIVATE);
 
+
         editText.setText(prefs.getString("email",""));
-
-
 
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-
-
 
                 SharedPreferences.Editor editor = prefs.edit();
 
