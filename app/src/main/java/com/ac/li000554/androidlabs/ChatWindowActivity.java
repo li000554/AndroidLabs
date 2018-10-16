@@ -71,8 +71,8 @@ public class ChatWindowActivity extends Activity {
         public View getView(int position, View convertView, ViewGroup parent){
             LayoutInflater inflater = ChatWindowActivity.this.getLayoutInflater();
             View result = null;
-            if(position % 2 == 1) result = inflater.inflate(R.layout.chat_row_incoming,null);
-            else result = inflater.inflate(R.layout.chat_row_outgoing,null);
+            if(position % 2 == 1) result = inflater.inflate(R.layout.layout_row_incoming,null);
+            else result = inflater.inflate(R.layout.layout_row_outgoing,null);
 
             TextView message = result.findViewById(R.id.message);
             message.setText(getItem(position));
