@@ -13,13 +13,11 @@ import android.widget.EditText;
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.i(ACTIVITY_NAME, "In onCreate()");
-
 
         final Button loginButton = (Button)findViewById(R.id.button_login);
 
@@ -36,7 +34,7 @@ public class LoginActivity extends Activity {
 
                 SharedPreferences.Editor editor = prefs.edit();
 
-                editor.putString("email",editText.getText().toString());
+                editor.putString("email", editText.getText().toString());
 
                 editor.commit();
 

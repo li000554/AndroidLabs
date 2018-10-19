@@ -32,7 +32,7 @@ public class StartActivity extends Activity {
 
         });
 
-        chatButton = findViewById(R.id.chatButton);
+        chatButton = (Button)findViewById(R.id.chatButton);
 
         chatButton.setOnClickListener(new View.OnClickListener() {
             @Override
