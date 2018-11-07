@@ -50,25 +50,13 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         database = db;
         Log.i("Database", "onOpen was called");
     }
-*/
-/*    //insert value into database/table
-    public void insertDB(String content){
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(KEY_MESSAGE, content);
-        database.insert(TABLE_NAME, null, contentValues);
-    }*/
-
-    //close
-/*    @Override
+@Override
     public void close(){
         if(database != null && database.isOpen()){
             database.close();
         }
     }*/
 
-/*public Cursor getRecords(){
-        return database.query(TABLE_NAME, null, null, null, null, null, null);
-}*/
 
 }
 

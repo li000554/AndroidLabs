@@ -62,25 +62,20 @@ public class ListItemsActivity extends Activity {
 
                 if (isChecked){
 
-//                    CharSequence text = "Switch is On"; //Switch is Off
 
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.SwitchOn, duration); //this is the ListActivity
 
-                    toast.show(); //display message "Switch is On" if the switch is checked
+                    toast.show();   //display message "Switch is On" if the switch is checked
 
-                }
-
-                if (!isChecked){
-
-//                    CharSequence text = "Switch is Off"; //Switch is Off
+                } else{        //if(!isChecked)
 
                     int duration = Toast.LENGTH_LONG;
 
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.SwitchOff, duration); //this is the ListActivity
 
-                    toast.show(); //display message "Switch is Off" if the switch is unchecked
+                    toast.show(); //display "Switch is Off" if switch is unchecked
 
                 }
 
@@ -105,8 +100,6 @@ public class ListItemsActivity extends Activity {
                     //Chain together various setter methods to set the dialog characteristics
 
                     builder.setMessage(R.string.dialog_message) //Add a dialog message to strings.xml
-
-
 
                             .setTitle(R.string.dialog_title)
 
@@ -137,17 +130,10 @@ public class ListItemsActivity extends Activity {
                             })
 
                             .show();
-
                 }
-
             }
-
         });
-
-
-
     }
-
 
     protected void onActivityResult(int requestCode, int responseCode, Intent data){
 

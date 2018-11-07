@@ -20,5 +20,9 @@
     <string name="chatButton">聊天按钮</string>
     <string name="startChat">开始尬聊</string>
     <string name="sendButton">发送</string>
-
+    <string name="forecastButton">天气预报</string>
+    <string name="currentT">当前温度</string>
+    <string name="minT">最低温度</string>
+    <string name="maxT">最高温度</string>
+    <string name="windSpeed">风速</string>
 </resources>

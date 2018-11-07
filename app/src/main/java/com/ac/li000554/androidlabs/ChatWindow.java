@@ -88,38 +88,7 @@ public class ChatWindow extends Activity {
                 editText.setText("");
         });
 
-       /* editText.setOnKeyListener((view, keyCode, event )->{
-            if(event.getAction() == KeyEvent.ACTION_DOWN){
-                switch (keyCode){
-                    case KeyEvent.KEYCODE_DPAD_CENTER:break;
-                    case KeyEvent.KEYCODE_ENTER:
-                        messageList.add(editText.getText().toString());
-                        messageAdapter.notifyDataSetChanged(); //restart getCount()/getView()
-                        chatDatabaseHelper.insertDB(editText.getText().toString());   //insert into database
-                        editText.setText("");
-                        return true;
-
-                        default:break;
-                }
-            }return false;
-
-        });*/
-
     }
-
-   /* public void displaySQL(){
-        cursor = chatDatabaseHelper.getRecords();
-        if(cursor.moveToFirst()){
-            while(!cursor.isAfterLast() ){
-                Log.i(chatWindow, "SQL message: " + cursor.getString( cursor.getColumnIndex( ChatDatabaseHelper.KEY_MESSAGE)));
-                cursor.moveToNext();
-            }
-            Log.i(chatWindow, "Cursor's  column count = " + cursor.getColumnCount());
-        }
-        for(int i = 0; i < cursor.getColumnCount(); i++){
-            Log.i(chatWindow, "The" + i + "row is "+ cursor.getColumnName(i));
-        }
-    }*/
 
     @Override
     protected  void onResume(){

@@ -70,4 +70,5 @@ public class LoginActivity extends Activity {
         super.onDestroy();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
+
 }

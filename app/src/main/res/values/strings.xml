@@ -20,5 +20,11 @@
     <string name="chatButton">Chat Button</string>
     <string name="startChat">Start Chat</string>
     <string name="sendButton">Send</string>
+    <string name="forecastButton">WeatherForcast</string>
+    <string name="currentT">CurrentTemp</string>
+    <string name="minT">LowestTemp</string>
+    <string name="maxT">HighestTemp</string>
+    <string name="windSpeed">WindSpeed</string>
+
 
 </resources>
