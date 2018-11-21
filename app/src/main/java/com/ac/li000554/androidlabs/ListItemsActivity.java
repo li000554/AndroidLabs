@@ -18,6 +18,10 @@ import android.widget.Toast;
 public class ListItemsActivity extends Activity {
     protected static final String ACTIVITY_NAME = "ListItemsActivity";
     protected static final int REQUEST_IMAGE_CAPTURE = 1;
+    protected ImageButton imageButton;
+    protected Switch switchButton;
+    protected CheckBox checkBox;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,7 @@ public class ListItemsActivity extends Activity {
 
 
 
-        ImageButton imageButton = (ImageButton)findViewById(R.id.imageButton);
+        imageButton = (ImageButton)findViewById(R.id.imageButton);
 
         imageButton.setOnClickListener(new View.OnClickListener(){
 
@@ -52,7 +56,7 @@ public class ListItemsActivity extends Activity {
 
 
 
-        Switch switchButton = (Switch)findViewById(R.id.switchButton);
+        switchButton = (Switch)findViewById(R.id.switchButton);
 
         switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
@@ -85,7 +89,7 @@ public class ListItemsActivity extends Activity {
 
 
 
-        CheckBox checkBox = (CheckBox)findViewById(R.id.checkBox);
+        checkBox = (CheckBox)findViewById(R.id.checkBox);
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
@@ -145,8 +149,6 @@ public class ListItemsActivity extends Activity {
 
             Bitmap bitmap = (Bitmap) extras.get("data");
 
-            ImageButton imageButton = (ImageButton)findViewById(R.id.imageButton);
-
             imageButton.setImageBitmap(bitmap);
 
         }
@@ -175,8 +177,6 @@ public class ListItemsActivity extends Activity {
         super.onDestroy();
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
-
-
 
 
 }

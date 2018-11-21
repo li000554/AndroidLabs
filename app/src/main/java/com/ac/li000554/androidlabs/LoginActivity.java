@@ -13,11 +13,13 @@ import android.widget.EditText;
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Log.i(ACTIVITY_NAME, "In onCreate()");
+
 
         final Button loginButton = (Button)findViewById(R.id.button_login);
 
@@ -25,30 +27,34 @@ public class LoginActivity extends Activity {
 
         final SharedPreferences prefs = getSharedPreferences("User_Info", Context.MODE_PRIVATE);
 
-
         editText.setText(prefs.getString("email",""));
+
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 
+
+
                 SharedPreferences.Editor editor = prefs.edit();
 
-                editor.putString("email", editText.getText().toString());
+                editor.putString("email",editText.getText().toString());
 
                 editor.commit();
 
-                Intent intent = new Intent(LoginActivity.this, StartActivity.class);
+                Intent intent = new Intent(LoginActivity.this,StartActivity.class);
 
                 startActivity(intent);
 
-                // executes on main thread after user presses button
+                // Code here executes on main thread after user presses button
 
             }
 
         });
 
     }
+
 
     protected void onResume(){
         super.onResume();

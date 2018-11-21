@@ -14,17 +14,26 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
     public static final int VERSION_NUM = 1;
     public static final String KEY_ID = "id";
     public static final String KEY_MESSAGE = "message";
+    public static final String SQL_CREATE ="CREATE TABLE "
+            + TABLE_NAME
+            + "( "
+            + KEY_ID
+            + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + KEY_MESSAGE
+            + " TEXT "
+            + ");";
 
 
 
     //constructor
     public ChatDatabaseHelper(Context ctx){
+
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db){
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_MESSAGE + " TEXT );");
+        db.execSQL(SQL_CREATE);
         Log.i("ChatDatabaseHelper", "Calling onCreate");
     }
 
@@ -43,19 +52,6 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
         Log.i("ChatDatabaseHelper", "Calling onDowngrade, oldVersion=" + oldVersion + " newVersion=" + newVersion);
     }
-
-   /* //open database
-    @Override
-    public void onOpen(SQLiteDatabase db){
-        database = db;
-        Log.i("Database", "onOpen was called");
-    }
-@Override
-    public void close(){
-        if(database != null && database.isOpen()){
-            database.close();
-        }
-    }*/
 
 
 }

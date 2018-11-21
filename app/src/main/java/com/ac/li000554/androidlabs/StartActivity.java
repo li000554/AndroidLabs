@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 public class StartActivity extends Activity {
     protected static final String ACTIVITY_NAME = "StartActivity";
 
@@ -20,12 +21,11 @@ public class StartActivity extends Activity {
         final Button button = (Button)findViewById(R.id.button);
 
 
-
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v){
 
-                Intent intent = new Intent(StartActivity.this,ListItemsActivity.class);
+                Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
 
                 startActivityForResult(intent, 10);
 
@@ -38,9 +38,8 @@ public class StartActivity extends Activity {
 
             public void onClick(View v){
 
-                Intent intent = new Intent(StartActivity.this,ChatWindow.class);
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
 
-               /* startActivityForResult(intent, 10);*/
                 startActivity(intent);
 
             }
@@ -53,8 +52,7 @@ public class StartActivity extends Activity {
             public void onClick(View v){
 
                 Intent intent = new Intent(StartActivity.this,WeatherForecast.class);
-
-                /*startActivityForResult(intent, 10);*/
+                
                 startActivity(intent);
 
             }

@@ -22,9 +22,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
 public class WeatherForecast extends Activity {
     protected static final String ACTIVITY_NAME = "WeatherForecast";
+    private static final String URLSTR = "http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric";
     private ProgressBar progressBar;
     private TextView currentT;
     private TextView minT;
@@ -45,7 +45,7 @@ public class WeatherForecast extends Activity {
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
         ForecastQuery query = new ForecastQuery();
-        query.execute("http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric");
+        query.execute(URLSTR);
 
         progressBar.setVisibility(View.VISIBLE);
     }
@@ -77,8 +77,8 @@ public class WeatherForecast extends Activity {
         }
     }
 
-    public boolean fileExistance(String fname){
-        File file = getBaseContext().getFileStreamPath(fname);
+    public boolean fileExists(String fName){
+        File file = getBaseContext().getFileStreamPath(fName);
         return file.exists();
     }
 
@@ -91,10 +91,10 @@ public class WeatherForecast extends Activity {
         protected String doInBackground(String...args){
             try{
                 //connect server
-                URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric");
+                URL url = new URL(URLSTR);
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                urlConnection.setReadTimeout(10000);
-                urlConnection.setConnectTimeout(15000);
+                urlConnection.setReadTimeout(10000);    //ms
+                urlConnection.setConnectTimeout(15000); //ms
                 urlConnection.setRequestMethod("GET");
                 urlConnection.setDoInput(true);
                 // Start query
@@ -130,7 +130,7 @@ public class WeatherForecast extends Activity {
                                 String iconName = parser.getAttributeValue(null, "icon");
                                 String iconFile = iconName + ".png";
 
-                                if(fileExistance(iconFile)){
+                                if(fileExists(iconFile)){
                                     FileInputStream fis = null;
                                     try {
                                         fis = openFileInput(iconFile);
@@ -138,6 +138,7 @@ public class WeatherForecast extends Activity {
                                     catch (FileNotFoundException e)
                                     {    e.printStackTrace();  }
                                     weather = BitmapFactory.decodeStream(fis);
+                                    Log.i(ACTIVITY_NAME, "File in local, file name is"+ iconFile);
                                 }else{
                                     URL iconUrl = new URL("http://openweathermap.org/img/w/" + iconFile);
                                     weather = getImage(iconUrl);
@@ -145,6 +146,7 @@ public class WeatherForecast extends Activity {
                                     weather.compress(Bitmap.CompressFormat.PNG, 80, outputStream);
                                     outputStream.flush();
                                     outputStream.close();
+                                    Log.i(ACTIVITY_NAME, "File needs to be downloaded, file name is"+ iconFile);
                                 }
                                 publishProgress(100);
                             }
