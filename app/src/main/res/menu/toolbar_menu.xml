@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/appleItm"
+        android:title="@string/apple"
+        android:icon="@drawable/apple"
+        android:orderInCategory="101"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/breadItm"
+        android:title="@string/bread"
+        android:icon="@drawable/bread"
+        android:orderInCategory="102"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/cherryItm"
+        android:title="@string/cherry"
+        android:icon="@drawable/cherry"
+        android:orderInCategory="103"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        android:orderInCategory="104"
+        app:showAsAction="never" />
+</menu>

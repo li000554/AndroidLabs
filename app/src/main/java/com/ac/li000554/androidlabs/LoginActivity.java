@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class LoginActivity extends Activity {
     protected static final String ACTIVITY_NAME = "LoginActivity";
 
@@ -36,7 +37,6 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
 
 
-
                 SharedPreferences.Editor editor = prefs.edit();
 
                 editor.putString("email",editText.getText().toString());
@@ -47,6 +47,7 @@ public class LoginActivity extends Activity {
 
                 startActivity(intent);
 
+                Log.i(ACTIVITY_NAME, "In onClick()");
                 // Code here executes on main thread after user presses button
 
             }

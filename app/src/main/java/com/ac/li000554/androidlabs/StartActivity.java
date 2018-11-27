@@ -18,22 +18,22 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
-        final Button button = (Button)findViewById(R.id.button);
+        final Button listButton = findViewById(R.id.list_button);
 
 
-        button.setOnClickListener(new View.OnClickListener() {
+        listButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v){
 
                 Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
 
-                startActivityForResult(intent, 10);
+                startActivityForResult(intent, 80);
 
             }
 
         });
 
-        final Button chatButton = (Button)findViewById(R.id.chatButton);
+        final Button chatButton = findViewById(R.id.chatButton);
         chatButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v){
@@ -46,13 +46,30 @@ public class StartActivity extends Activity {
 
         });
 
-        final Button forcastButton = (Button)findViewById(R.id.forecastButton);
-        forcastButton.setOnClickListener(new View.OnClickListener() {
+        final Button forecastButton = findViewById(R.id.forecastButton);
+        forecastButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v){
 
-                Intent intent = new Intent(StartActivity.this,WeatherForecast.class);
+                Log.i(ACTIVITY_NAME, "You clicked button forecast");
+
+                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
                 
+                startActivity(intent);
+
+            }
+
+        });
+
+        final Button toolbarButton = findViewById(R.id.testToolbar);
+        toolbarButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v){
+
+                Log.i(ACTIVITY_NAME, "You clicked button Toolbar");
+
+                Intent intent = new Intent(StartActivity.this, TestToolBar.class);
+
                 startActivity(intent);
 
             }
@@ -68,7 +85,6 @@ public class StartActivity extends Activity {
             Log.i(ACTIVITY_NAME,"Returned to StartActivity.onActivityResult");
 
         }
-
 
 
         if (responseCode == Activity.RESULT_OK) {

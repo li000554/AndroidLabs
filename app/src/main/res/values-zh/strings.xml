@@ -25,4 +25,13 @@
     <string name="minT">最低温度</string>
     <string name="maxT">最高温度</string>
     <string name="windSpeed">风速</string>
+    <string name="apple">苹果</string>
+    <string name="bread">面包</string>
+    <string name="cherry">樱桃</string>
+    <string name="about">关于</string>
+    <string name="test_toolbar">工具栏</string>
+    <string name="dialog_title_toolbar_yes_stay">回到上一页?</string>
+    <string name="dialog_message_goback">返回上一页选是，留在此页选否</string>
+    <string name="dialog_title_toolbar_item3">新信息</string>
+    <string name="dialog_message_toolbar_item3"> </string>
 </resources>
